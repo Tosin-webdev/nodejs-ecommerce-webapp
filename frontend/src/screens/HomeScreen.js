@@ -9,7 +9,6 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState([]);
   const [error, setError] = useState(false);
 
-  
   useEffect(() => {
     const fetchData = async () => {
       try {
