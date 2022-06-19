@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomeScreen from "./screens/HomeScreen";
-import ProductScreen from "./screens/ProductScreen";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CartScreen from './screens/CartScreen';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
         <main>
           <Routes>
+            <Route path="/cart/:id" element={<CartScreen />}></Route>
             <Route path="/product/:id" element={<ProductScreen />}></Route>
             <Route path="/" element={<HomeScreen />} exact></Route>
           </Routes>
