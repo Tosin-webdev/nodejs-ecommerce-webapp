@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
+import { addToCart } from '../actions/cartActions';
 
 export default function CartScreen() {
   const dispatch = useDispatch();
