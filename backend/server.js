@@ -1,8 +1,16 @@
 import express from 'express';
 import data from './data.js';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import userRouter from './routers/userRouter.js';
 
 dotenv.config({ path: '.env' });
+
+// connect to mongodb
+mongoose.connect('mongodb://localhost/shoplift', {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+});
 
 const app = express();
 
@@ -16,12 +24,17 @@ app.get('/api/products/:id', (req, res) => {
   }
 });
 
+app.use('/api/users', userRouter);
+
 app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
-
 app.get('/', (req, res) => {
   res.send('Server is ready');
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
 });
 
 const port = process.env.PORT || 7000;
