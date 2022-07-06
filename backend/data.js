@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: '1',
       name: 'Apple watch series 7',
       category: 'watch',
       image: '/images/watch.jpg',
@@ -29,7 +28,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
       name: 'Iphone 13 pro',
       category: 'phone',
       countInStock: 20,
@@ -41,7 +39,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
       name: 'Airpods max',
       category: 'airpods',
       image: '/images/airpod.webp',
@@ -53,7 +50,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
       name: 'Iphone 12 pro',
       category: 'phone',
       image: '/images/iphone12.webp',
@@ -65,7 +61,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
       name: 'Airpod pro',
       category: 'airpods',
       countInStock: 15,
@@ -77,7 +72,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
       name: 'Macbook pro 2021',
       category: 'laptops',
       image: '/images/macbook.webp',
