@@ -28,10 +28,12 @@ app.get('/', (req, res) => {
   res.send('Server is ready');
 });
 
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 7000;
 app.listen(port, () => {
   console.log(`Server at http://localhost:${port}`);
