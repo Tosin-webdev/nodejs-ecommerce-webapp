@@ -125,7 +125,7 @@ a.brand {
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
-  margin-left: 0.2rem
+  margin-left: 0.2rem;
 }
 
 .row {
@@ -186,7 +186,7 @@ img.large {
   padding: 1rem;
 }
 
-.card-body>* {
+.card-body > * {
   margin-bottom: 0.5rem;
 }
 
@@ -207,6 +207,7 @@ img.large {
 /* Alert */
 
 .loading {
+  /* To prevent moving around the spiner for loading */
   display: block !important;
 }
 
@@ -239,7 +240,7 @@ img.large {
   margin: 0 auto;
 }
 
-.form>div {
+.form > div {
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -275,7 +276,7 @@ img.large {
 
 /* Checkout-steps */
 
-.checkout-steps>div {
+.checkout-steps > div {
   border-top: 0.3rem #c0c0c0 solid;
   color: #c0c0c0;
   flex: 1;
@@ -283,8 +284,7 @@ img.large {
   font-weight: bold;
 }
 
-.checkout-steps>div.active {
+.checkout-steps > div.active {
   border-top-color: #f08000;
   color: #f08000;
-
 }

@@ -1,14 +1,23 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { signout } from './actions/userActions';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-  console.log(cartItems);
+  // console.log(cartItems)
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+  console.log(userInfo);
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout());
+  };
 
   return (
     <Router>
@@ -24,7 +33,23 @@ function App() {
               Cart
               {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
             </Link>
-            <Link to="/signin">Sign In</Link>
+            {userInfo ? (
+              <div className="dropdown">
+                <Link to="#">
+                  {userInfo.user.name}
+                  <i className="fa fa-caret-down"></i>
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="#signout" onClick={signoutHandler}>
+                      Sign Out
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <Link to="/signin">Sign In</Link>
+            )}
           </div>
         </header>
 
@@ -33,6 +58,7 @@ function App() {
             <Route path="/cart/:id" element={<CartScreen />}></Route>
             <Route path="/product/:id" element={<ProductScreen />}></Route>
             <Route path="/signin" element={<SigninScreen />}></Route>
+            <Route path="/register" element={<RegisterScreen />}></Route>
             <Route path="/" element={<HomeScreen />}></Route>
           </Routes>
         </main>
