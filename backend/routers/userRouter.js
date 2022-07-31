@@ -23,11 +23,11 @@ userRouter.post(
       // check user in the database
       const user = await User.findOne({ email });
       if (!user) {
-        return res.status(404).send({ message: "User doesn't exist" });
+        return res.status(404).send({ message: 'Incorrect email or password' });
       }
       const isPasswordCorrect = await bcrypt.compare(password, user.password);
       // checks if passwords match
-      if (!isPasswordCorrect) return res.status(400).json({ message: 'Invalid credentials' });
+      if (!isPasswordCorrect) return res.status(400).json({ message: 'Incorrect email or password' });
       const token = generateToken(user);
       res.status(200).send({ user, token });
     } catch (error) {
@@ -53,10 +53,9 @@ userRouter.post(
         name,
       });
       const token = generateToken(user);
-      res.status(200).send({ user, token });
+      res.status(201).send({ user, token });
     } catch (error) {
       res.status(500).json({ message: 'Something went wrong' });
-
       console.log(error);
     }
   })

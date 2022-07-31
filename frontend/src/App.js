@@ -8,13 +8,14 @@ import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
 import ShippingAddress from './screens/shippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   // console.log(cartItems)
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  console.log(userInfo);
+  // console.log(userInfo);
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout());
@@ -56,12 +57,14 @@ function App() {
 
         <main>
           <Routes>
+            <Route path="/cart" element={<CartScreen />}></Route>
             <Route path="/cart/:id" element={<CartScreen />}></Route>
             <Route path="/product/:id" element={<ProductScreen />}></Route>
             <Route path="/signin" element={<SigninScreen />}></Route>
             <Route path="/register" element={<RegisterScreen />}></Route>
             <Route path="/shipping" element={<ShippingAddress />}></Route>
             <Route path="/payment" element={<PaymentMethodScreen />}></Route>
+            <Route path="/placeorder" element={<PlaceOrderScreen />}></Route>
             Route
             <Route path="/" element={<HomeScreen />}></Route>
           </Routes>

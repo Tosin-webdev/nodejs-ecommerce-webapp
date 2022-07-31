@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { savePaymentMethod } from '../actions/cartActions';
@@ -11,6 +11,7 @@ const PaymentMethodScreen = () => {
 
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
+  console.log(shippingAddress);
   if (!shippingAddress.address) {
     navigate('/shipping');
   }
@@ -19,6 +20,13 @@ const PaymentMethodScreen = () => {
     dispatch(savePaymentMethod(paymentMethod));
     navigate('/placeorder');
   };
+
+  useEffect(() => {
+    if (!shippingAddress.address) {
+      navigate('/shipping');
+    }
+  }, [navigate, shippingAddress]);
+
   return (
     <div>
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
