@@ -39,7 +39,7 @@ export default function CartScreen() {
         <h1>Shopping cart</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
-            Cart is empty. <Link to="/">Gp Shopping</Link>
+            Cart is empty. <Link to="/">Go Shopping</Link>
           </MessageBox>
         ) : (
           <ul>

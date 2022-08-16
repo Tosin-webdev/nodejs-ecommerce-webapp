@@ -18,7 +18,6 @@ export const generateToken = (user) => {
 };
 
 export const isAuth = (req, res, next) => {
-  // console.log(req.cookies.jwt);
   const authorization = req.headers.authorization;
   // console.log(authorization);
   if (authorization) {

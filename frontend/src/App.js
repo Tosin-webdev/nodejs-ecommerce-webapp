@@ -9,6 +9,7 @@ import SigninScreen from './screens/SigninScreen';
 import ShippingAddress from './screens/shippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -27,7 +28,7 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              amazona
+              shopinner
             </Link>
           </div>
           <div>
@@ -65,7 +66,7 @@ function App() {
             <Route path="/shipping" element={<ShippingAddress />}></Route>
             <Route path="/payment" element={<PaymentMethodScreen />}></Route>
             <Route path="/placeorder" element={<PlaceOrderScreen />}></Route>
-            Route
+            <Route path="/order/:id" element={<OrderScreen />}></Route>
             <Route path="/" element={<HomeScreen />}></Route>
           </Routes>
         </main>

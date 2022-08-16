@@ -13,7 +13,6 @@ export default function HomeScreen() {
   // const [products, setProducts] = useState([]);
   // const [loading, setLoading] = useState([]);
   // const [error, setError] = useState(false);
-
   useEffect(() => {
     dispatch(listProducts());
   }, []);
