@@ -4,6 +4,7 @@ import data from '../data.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
 import { generateToken } from '../utils.js';
+import { isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
@@ -60,4 +61,37 @@ userRouter.post(
     }
   })
 );
+
+userRouter.get(
+  '/:id',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    console.log(user);
+    if (user) {
+      res.send(user);
+    } else {
+      res.status(404).send({ message: 'User Not Found' });
+    }
+  })
+);
+
+userRouter.put(
+  '/profile',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const updatedUser = await User.findById(req.user._id);
+    if (updatedUser) {
+      updatedUser.name = req.body.name || updatedUser.name;
+      updatedUser.email = req.body.email || updatedUser.email;
+      if (req.body.password) {
+        updatedUser.password = bcrypt.hashSync(req.body.password, 8);
+      }
+
+      const token = generateToken(updatedUser);
+      const user = await updatedUser.save();
+      res.send({ user, token });
+    }
+  })
+);
+
 export default userRouter;

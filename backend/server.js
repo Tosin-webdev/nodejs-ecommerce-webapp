@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
@@ -25,9 +26,15 @@ app.use(express.json());
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
+app.get('/api/config/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+  // res.send('hello');
+});
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
+
+// console.log(process.env);
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {

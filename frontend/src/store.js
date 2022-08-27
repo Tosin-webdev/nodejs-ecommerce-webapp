@@ -2,8 +2,18 @@ import { legacy_createStore, applyMiddleware, compose, combineReducers } from 'r
 import thunk from 'redux-thunk';
 import { productDetailsReducer, productListReducer } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
-import { userRegisterReducer, userSigninReducer } from './reducers/userReducer';
-import { orderCreateReducer, orderDetailsReducer } from './reducers/orderReducers';
+import {
+  userDetailsReducer,
+  userRegisterReducer,
+  userSigninReducer,
+  userUpdateProfileReducer,
+} from './reducers/userReducer';
+import {
+  orderCreateReducer,
+  orderDetailsReducer,
+  orderMineListReducer,
+  orderPayReducer,
+} from './reducers/orderReducers';
 const initialState = {
   userSignin: {
     // read the value in local storage
@@ -14,6 +24,7 @@ const initialState = {
     // read the value in local storage
     cartItems: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [],
     shippingAddress: localStorage.getItem('shippingAddress') ? JSON.parse(localStorage.getItem('shippingAddress')) : {},
+    paymentMethod: 'payPal',
   },
 };
 
@@ -25,6 +36,10 @@ const reducer = combineReducers({
   userRegister: userRegisterReducer,
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderMineList: orderMineListReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
