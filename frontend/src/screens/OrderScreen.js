@@ -64,7 +64,7 @@ const OrderScreen = () => {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
-      <h1>Order {order._id}</h1>
+      {/* <h1>Order {order._id}</h1> */}
       <div className="row top">
         <div className="col-2">
           <ul>
@@ -77,11 +77,11 @@ const OrderScreen = () => {
                   {order.shippingAddress.address},{order.shippingAddress.city}, {order.shippingAddress.postalCode},{' '}
                   {order.shippingAddress.country}
                 </p>
-                {order.isDelivered ? (
+                {/* {order.isDelivered ? (
                   <MessageBox variant="success"> Delivered at {order.deliveredAt} </MessageBox>
                 ) : (
                   <MessageBox variant="danger"> Not Delivered {order.deliveredAt} </MessageBox>
-                )}
+                )} */}
               </div>
             </li>
             <li>
@@ -91,7 +91,11 @@ const OrderScreen = () => {
                   <strong>Payment Method:</strong> {order.paymentMethod} <br />
                 </p>
                 {order.isPaid ? (
-                  <MessageBox variant="success"> Paid at {order.paidAt} </MessageBox>
+                  <MessageBox variant="success">
+                    Thank you For your order. <br /> <br />
+                    Order ID: {order._id} <br />
+                    paidAt: {order.paidAt.substring(0, 10)}
+                  </MessageBox>
                 ) : (
                   <MessageBox variant="danger"> Not paid </MessageBox>
                 )}

@@ -43,9 +43,9 @@ export default function ProductScreen() {
                 <li>
                   <h1>{product.name}</h1>
                 </li>
-                <li>
+                {/* <li>
                   <Rating rating={product.rating} numReviews={product.numReviews}></Rating>
-                </li>
+                </li> */}
                 <li>price : ${product.price}</li>
                 <li>
                   Description:

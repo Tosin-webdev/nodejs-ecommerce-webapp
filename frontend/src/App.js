@@ -13,6 +13,9 @@ import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import PrivateRoute from './components/PrivateRoute';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -36,7 +39,11 @@ function App() {
           </div>
           <div>
             <Link to="/cart">
-              Cart
+              <FontAwesomeIcon icon="fa-solid fa-mug-saucer" />
+              {/* <FontAwesomeIcon icon="fa-solid fa-cart-shopping" /> */}
+              <FontAwesomeIcon icon={faCartShopping} />
+              {/* <FontAwesomeIcon icon="fa-regular fa-cart-shopping" color="red" /> */}
+              {/* Cart */}
               {cartItems.length > 0 && <span className="badge">{cartItems.length}</span>}
             </Link>
             {userInfo ? (
@@ -108,7 +115,7 @@ function App() {
             <Route path="/" element={<HomeScreen />}></Route>
           </Routes>
         </main>
-        <footer className="row center">All right reserved</footer>
+        <footer className="row center">All right reserved &copy; 2022 </footer>
       </div>
     </Router>
   );

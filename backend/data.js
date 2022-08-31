@@ -25,7 +25,7 @@ const data = {
       brand: 'Apple',
       rating: 4.5,
       numReviews: 10,
-      description: 'high quality product',
+      description: 'Apple Watch Series 7 (GPS) 45MM - Abyss green Sport Band',
     },
     {
       name: 'Iphone 13 pro',
@@ -36,10 +36,10 @@ const data = {
       brand: 'Apple',
       rating: 4.0,
       numReviews: 10,
-      description: 'high quality product',
+      description: 'Apple IPhone 13 Pro Max - 256GB, 6GB RAM, 6.7-Inch,(12MP+12MP+12MP) - 5G-Pacific Black',
     },
     {
-      name: 'Airpods max',
+      name: 'Apple Airpods max',
       category: 'airpods',
       image: '/images/airpod.webp',
       countInStock: 0,
@@ -47,7 +47,7 @@ const data = {
       brand: 'Apple',
       rating: 4.8,
       numReviews: 17,
-      description: 'high quality product',
+      description: 'Apple AirPods Max - Sky Blue',
     },
     {
       name: 'Iphone 12 pro',
@@ -58,7 +58,7 @@ const data = {
       brand: 'Apple',
       rating: 4.5,
       numReviews: 14,
-      description: 'high quality product',
+      description: 'Apple IPhone 12 Pro Max - 256GB, 6GB RAM, 6.7-Inch,(10MP+10MP+10MP) - 5G-Pacific Blue',
     },
     {
       name: 'Airpod pro',
@@ -69,7 +69,7 @@ const data = {
       brand: 'Apple',
       rating: 4.5,
       numReviews: 10,
-      description: 'high quality product',
+      description: 'AirPods Pro With Magsafe Charging Case - Black',
     },
     {
       name: 'Macbook pro 2021',
@@ -80,7 +80,7 @@ const data = {
       brand: 'Apple',
       rating: 4.5,
       numReviews: 15,
-      description: 'high quality product',
+      description: 'Apple MacBook Pro 14.2" - M1 Pro Chip - 16GB 1TB Space Grey - 2021',
     },
   ],
 };

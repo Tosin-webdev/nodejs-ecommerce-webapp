@@ -54,6 +54,7 @@ h1 {
 h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
+  /* color: #3acddb; */
 }
 
 a {
@@ -61,7 +62,7 @@ a {
 }
 
 a:hover {
-  color: #ff8000;
+  color: #3acddb;
 }
 
 ul {
@@ -100,7 +101,7 @@ button:hover {
 }
 
 button.primary {
-  background-color: #f0c040;
+  background-color: #3acddb;
 }
 
 button.block {
@@ -120,7 +121,7 @@ a.brand {
 }
 
 .badge {
-  background-color: #f02020;
+  background-color: #3acddb;
   color: #ffffff;
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
@@ -289,8 +290,8 @@ img.large {
 }
 
 .checkout-steps > div.active {
-  border-top-color: #f08000;
-  color: #f08000;
+  border-top-color: #3acddb;
+  color: #3acddb;
 }
 
 /* Table */
