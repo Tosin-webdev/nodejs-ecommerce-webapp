@@ -9,7 +9,19 @@ import orderRouter from './routers/orderRouter.js';
 dotenv.config({ path: '.env' });
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/shoplift');
+// mongoose.connect('mongodb://localhost/shoplift');
+
+const connectDB = async () => {
+  try {
+    const con = await mongoose.connect(process.env.CONNECTION_URL);
+    console.log(`mongoDB connected: ${con.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
+
+connectDB();
 
 const app = express();
 
