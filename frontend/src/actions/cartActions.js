@@ -1,4 +1,5 @@
 import Axios from 'axios';
+
 import {
   CART_ADD_ITEM,
   CART_REMOVE_ITEM,
@@ -6,8 +7,12 @@ import {
   CART_SAVE_SHIPPING_ADDRESS,
 } from '../constants/cartConstants';
 
+const API = Axios.create({
+  baseURL: 'https://i-store-ecommerce.herokuapp.com/',
+});
+
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
-  const { data } = await Axios.get(`/api/products/${productId}`);
+  const { data } = await API.get(`/api/products/${productId}`);
   //   requesting redux store to add this products to the cart
   dispatch({
     type: CART_ADD_ITEM,

@@ -9,6 +9,10 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { ORDER_PAY_RESET } from '../constants/orderConstants';
 
+const API = Axios.create({
+  baseURL: 'https://i-store-ecommerce.herokuapp.com/',
+});
+
 const OrderScreen = () => {
   const { id } = useParams();
   const orderId = id;
@@ -23,7 +27,7 @@ const OrderScreen = () => {
 
   useEffect(() => {
     const addPayPalScript = async () => {
-      const { data } = await Axios.get('/api/config/paypal');
+      const { data } = await API.get('/api/config/paypal');
       const script = document.createElement('script');
       script.type = 'text/javascript';
       script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;

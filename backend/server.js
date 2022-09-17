@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 import orderRouter from './routers/orderRouter.js';
+import cors from 'cors';
 
 dotenv.config({ path: '.env' });
 
@@ -35,6 +36,7 @@ const app = express();
 //   }
 // });
 app.use(express.json());
+app.use(cors());
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);

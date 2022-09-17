@@ -15,6 +15,10 @@ import {
 import Axios from 'axios';
 import { CART_EMPTY } from '../constants/cartConstants';
 
+const API = Axios.create({
+  baseURL: 'https://i-store-ecommerce.herokuapp.com/',
+});
+
 export const createOrder = (order) => async (dispatch, getState) => {
   dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
 
@@ -23,7 +27,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     console.log(userInfo);
-    const { data } = await Axios.post('/api/orders', order, {
+    const { data } = await API.post('/api/orders', order, {
       headers: {
         Authorization: `Bearer ${userInfo.token}`,
       },
@@ -45,7 +49,7 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = await Axios.get(`/api/orders/${orderId}`, {
+    const { data } = await API.get(`/api/orders/${orderId}`, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
@@ -61,7 +65,7 @@ export const payOrder = (order, paymentResult) => async (dispatch, getState) => 
     userSignin: { userInfo },
   } = getState();
   try {
-    const { data } = Axios.put(`/api/orders/${order._id}/pay`, paymentResult, {
+    const { data } = API.put(`/api/orders/${order._id}/pay`, paymentResult, {
       headers: { Authorization: `Bearer ${userInfo.token}` },
     });
     dispatch({ type: ORDER_PAY_SUCCESS, payload: data });
@@ -78,7 +82,7 @@ export const listOrderMine = () => async (dispatch, getState) => {
   } = getState();
 
   try {
-    const { data } = await Axios.get('/api/orders/mine', {
+    const { data } = await API.get('/api/orders/mine', {
       headers: {
         Authorization: `Bearer ${userInfo.token}`,
       },
