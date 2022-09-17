@@ -41,6 +41,10 @@ npm install
  npm run dev
  ```
  
+ #### Demo
+ [site](https://i-stores.netlify.app) <br/>
+ Deployed the backend to heroku and the frontend to netlify.
+ 
 
  
 
