@@ -9,7 +9,9 @@ import SigninScreen from './screens/SigninScreen';
 import ShippingAddress from './screens/shippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import PlaceOrderScreen2 from './screens/PlaceOrderScreen2';
 import OrderScreen from './screens/OrderScreen';
+import OrderScreen2 from './screens/OrderScreen2';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import PrivateRoute from './components/PrivateRoute';
@@ -101,8 +103,10 @@ function App() {
             <Route path="/register" element={<RegisterScreen />}></Route>
             <Route path="/shipping" element={<ShippingAddress />}></Route>
             <Route path="/payment" element={<PaymentMethodScreen />}></Route>
-            <Route path="/placeorder" element={<PlaceOrderScreen />}></Route>
+            <Route path="/paypal/placeorder" element={<PlaceOrderScreen />}></Route>
+            <Route path="/flutterwave/placeorder" element={<PlaceOrderScreen2 />}></Route>
             <Route path="/order/:id" element={<OrderScreen />}></Route>
+            <Route path="/order2/:id" element={<OrderScreen2 />}></Route>
             <Route path="/orderhistory" element={<OrderHistoryScreen />}></Route>
             <Route
               path="/profile"

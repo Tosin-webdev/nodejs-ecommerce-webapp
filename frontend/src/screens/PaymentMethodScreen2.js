@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { savePaymentMethod } from '../actions/cartActions';
 import CheckoutSteps from '../components/CheckoutSteps';
 
-const PaymentMethodScreen = () => {
+const PaymentMethodScreen2 = () => {
   const [paymentMethod, setPaymentMethod] = useState('PayPal');
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const PaymentMethodScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
-    navigate('/paypal/placeorder');
+    navigate('/flutterwave/placeorder');
   };
   const submitHandler2 = (e) => {
     e.preventDefault();
@@ -74,4 +74,4 @@ const PaymentMethodScreen = () => {
   );
 };
 
-export default PaymentMethodScreen;
+export default PaymentMethodScreen2;

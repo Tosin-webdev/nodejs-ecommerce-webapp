@@ -10,7 +10,7 @@ import MessageBox from '../components/MessageBox';
 import { ORDER_PAY_RESET } from '../constants/orderConstants';
 
 const API = Axios.create({
-  baseURL: 'https://i-store-ecommerce.herokuapp.com/',
+  baseURL: 'http://localhost:7000',
 });
 
 const OrderScreen = () => {

@@ -6,12 +6,13 @@ import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import cors from 'cors';
+// import fol from '.'
 
 dotenv.config({ path: '.env' });
 
 // connect to mongodb
 // mongoose.connect('mongodb://localhost/shoplift');
-
+s;
 const connectDB = async () => {
   try {
     const con = await mongoose.connect(process.env.CONNECTION_URL);

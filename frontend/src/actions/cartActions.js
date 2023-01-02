@@ -8,7 +8,7 @@ import {
 } from '../constants/cartConstants';
 
 const API = Axios.create({
-  baseURL: 'https://i-store-ecommerce.herokuapp.com/',
+  baseURL: 'http://localhost:7000',
 });
 
 export const addToCart = (productId, qty) => async (dispatch, getState) => {

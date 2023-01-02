@@ -9,7 +9,7 @@ import {
 } from '../constants/productConstants';
 
 const API = Axios.create({
-  baseURL: 'https://i-store-ecommerce.herokuapp.com/',
+  baseURL: 'http://localhost:7000',
 });
 
 export const listProducts = () => async (dispatch) => {

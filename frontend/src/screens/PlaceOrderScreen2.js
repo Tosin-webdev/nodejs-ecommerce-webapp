@@ -10,7 +10,7 @@ import MessageBox from '../components/MessageBox';
 const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  // console.log(cart);
+  console.log(cart);
   const navigate = useNavigate();
   if (!cart.paymentMethod) {
     navigate('/payment');
@@ -30,7 +30,7 @@ const PlaceOrderScreen = () => {
 
   useEffect(() => {
     if (success) {
-      navigate(`/order/${order._id}`);
+      navigate(`/order2/${order._id}`);
       dispatch({ type: ORDER_CREATE_RESET });
     }
   }, [dispatch, order, navigate, success]);
@@ -56,7 +56,9 @@ const PlaceOrderScreen = () => {
               <div className="card card-body">
                 {/* <h2>Payment</h2> */}
                 <p>
-                  <strong>Payment Method:</strong> {cart.paymentMethod} <br />
+                  <strong>Payment Method:</strong>
+                  {cart.paymentMethod2}
+                  <br />
                 </p>
               </div>
             </li>
