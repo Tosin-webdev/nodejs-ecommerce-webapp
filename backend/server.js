@@ -12,7 +12,6 @@ dotenv.config({ path: '.env' });
 
 // connect to mongodb
 // mongoose.connect('mongodb://localhost/shoplift');
-s;
 const connectDB = async () => {
   try {
     const con = await mongoose.connect(process.env.CONNECTION_URL);
