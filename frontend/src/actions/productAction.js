@@ -9,7 +9,7 @@ import {
 } from '../constants/productConstants';
 
 const API = Axios.create({
-  baseURL: 'http://localhost:7000',
+  baseURL: 'https://ecommerce-app-dkbg.onrender.com/',
 });
 
 export const listProducts = () => async (dispatch) => {

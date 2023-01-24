@@ -16,7 +16,7 @@ import {
 } from '../constants/userConstants';
 
 const API = Axios.create({
-  baseURL: 'http://localhost:7000',
+  baseURL: 'https://ecommerce-app-dkbg.onrender.com/',
 });
 
 export const register = (name, email, password) => async (dispatch) => {

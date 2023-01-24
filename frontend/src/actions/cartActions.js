@@ -8,7 +8,7 @@ import {
 } from '../constants/cartConstants';
 
 const API = Axios.create({
-  baseURL: 'http://localhost:7000',
+  baseURL: 'https://ecommerce-app-dkbg.onrender.com/',
 });
 
 export const addToCart = (productId, qty) => async (dispatch, getState) => {

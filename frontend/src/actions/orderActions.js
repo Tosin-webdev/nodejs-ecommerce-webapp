@@ -16,7 +16,7 @@ import Axios from 'axios';
 import { CART_EMPTY } from '../constants/cartConstants';
 
 const API = Axios.create({
-  baseURL: 'http://localhost:7000',
+  baseURL: 'https://ecommerce-app-dkbg.onrender.com/',
 });
 
 export const createOrder = (order) => async (dispatch, getState) => {

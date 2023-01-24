@@ -5,6 +5,9 @@ import { listOrderMine } from '../actions/orderActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+
 const OrderHistoryScreen = () => {
   const navigate = useNavigate();
   // get error loading and order from redux store
@@ -27,6 +30,7 @@ const OrderHistoryScreen = () => {
         <table className="table">
           <thead>
             <tr>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: '3rem' }} />
               <th>ID</th>
               <th>DATE</th>
               <th>TOTAL</th>
