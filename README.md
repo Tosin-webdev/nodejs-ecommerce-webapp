@@ -43,7 +43,7 @@ npm install
  
  #### Demo
  [site](https://i-stores.netlify.app) <br/>
- Deployed the backend on render and the frontend to netlify.
+ Deployed the backend to render and the frontend to netlify.
  
 
  
