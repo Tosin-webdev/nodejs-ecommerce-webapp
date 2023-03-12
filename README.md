@@ -12,7 +12,7 @@ This is an ecommerce web app built with the mern stack and utilizes third party 
     * Mongoose Schema to model the application data
     * Paypal integration
     
-### SETUP
+### Setup
 ```
 create a .env file and add the following
 PORT = 7000
