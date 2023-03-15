@@ -12,7 +12,7 @@ This is an ecommerce web app built with the mern stack and utilizes third party 
     * Mongoose Schema to model the application data
     * Paypal integration
     
-### SETUP
+### Setup
 ```
 create a .env file and add the following
 PORT = 7000
@@ -43,7 +43,7 @@ npm install
  
  #### Demo
  [site](https://i-stores.netlify.app) <br/>
- Deployed the backend to heroku and the frontend to netlify.
+ Deployed the backend to render and the frontend to netlify.
  
 
  
