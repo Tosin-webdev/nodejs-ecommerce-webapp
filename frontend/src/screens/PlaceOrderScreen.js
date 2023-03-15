@@ -73,7 +73,6 @@ const PlaceOrderScreen = () => {
                         <div className="min-30">
                           <Link to={`/product/${item.product}`}>{item.name}</Link>
                         </div>
-
                         <div>
                           {item.qty} x ${item.price} = ${item.qty * item.price}
                         </div>
