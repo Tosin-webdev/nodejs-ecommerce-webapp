@@ -1,7 +1,7 @@
 # nodejs-ecommerce-webapp
 ![Screenshot (331)](https://user-images.githubusercontent.com/64624808/190839845-058dd072-27ac-4a76-b98d-2d40d71dbfb6.png)
 
-## Description
+### Description
 This is an ecommerce web app built with the mern stack and utilizes third party API's 
 
  * features:
