@@ -120,7 +120,7 @@ const OrderScreen = () => {
                         </div>
 
                         <div>
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                          {item.qty} x N{item.price} = ${item.qty * item.price}
                         </div>
                       </div>
                     </li>
@@ -139,19 +139,19 @@ const OrderScreen = () => {
               <li>
                 <div className="row">
                   <div>Items</div>
-                  <div>${order.itemsPrice.toFixed(2)}</div>
+                  <div>N{order.itemsPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Shipping</div>
-                  <div>${order.shippingPrice.toFixed(2)}</div>
+                  <div>N{order.shippingPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Tax</div>
-                  <div>${order.taxPrice.toFixed(2)}</div>
+                  <div>N{order.taxPrice.toFixed(2)}</div>
                 </div>
               </li>
               <li>
@@ -160,7 +160,7 @@ const OrderScreen = () => {
                     <strong> Order Total</strong>
                   </div>
                   <div>
-                    <strong>${order.totalPrice.toFixed(2)}</strong>
+                    <strong>N{order.totalPrice.toFixed(2)}</strong>
                   </div>
                 </div>
               </li>

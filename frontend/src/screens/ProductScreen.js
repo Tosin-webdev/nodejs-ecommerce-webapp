@@ -46,7 +46,7 @@ export default function ProductScreen() {
                 {/* <li>
                   <Rating rating={product.rating} numReviews={product.numReviews}></Rating>
                 </li> */}
-                <li>price : ${product.price}</li>
+                <li>price : N{product.price}</li>
                 <li>
                   Description:
                   <p>{product.description}</p>
@@ -59,7 +59,7 @@ export default function ProductScreen() {
                   <li>
                     <div className="row">
                       <div>Price</div>
-                      <div className="price">${product.price}</div>
+                      <div className="price">N{product.price}</div>
                     </div>
                   </li>
                   <li>
