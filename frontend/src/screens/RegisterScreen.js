@@ -43,7 +43,7 @@ const RegisterScreen = () => {
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Full Name</label>
           <input
             type="text"
             id="name"

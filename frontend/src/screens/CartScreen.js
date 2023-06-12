@@ -13,7 +13,7 @@ export default function CartScreen() {
   const productId = params.id;
   const { search } = useLocation();
   const qtyInUrl = new URLSearchParams(search).get('qty');
-  // console.log(qtyInUrl);
+  console.log(qtyInUrl);
   const qty = qtyInUrl ? Number(qtyInUrl) : 1;
   const cart = useSelector((state) => state.cart);
 

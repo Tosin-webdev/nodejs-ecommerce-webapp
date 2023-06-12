@@ -6,11 +6,12 @@ import CheckoutSteps from '../components/CheckoutSteps';
 import { ORDER_CREATE_RESET } from '../constants/orderConstants';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-
+console.log(1);
 const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  // console.log(cart);
+  console.log(cart);
+  console.log(1);
   const navigate = useNavigate();
   if (!cart.paymentMethod) {
     navigate('/payment');
@@ -34,7 +35,7 @@ const PlaceOrderScreen = () => {
       dispatch({ type: ORDER_CREATE_RESET });
     }
   }, [dispatch, order, navigate, success]);
-
+  // console.log(cart);
   return (
     <div>
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>

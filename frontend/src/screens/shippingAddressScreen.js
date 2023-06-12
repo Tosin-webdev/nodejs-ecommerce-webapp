@@ -11,7 +11,7 @@ const ShippingAddressScreen = () => {
   const { userInfo } = userSignin;
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
-
+  console.log(cart);
   // if (!userInfo) {
   //   navigate('/signin');
   // }
