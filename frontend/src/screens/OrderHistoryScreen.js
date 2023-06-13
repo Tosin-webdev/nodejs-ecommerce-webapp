@@ -30,12 +30,11 @@ const OrderHistoryScreen = () => {
         <table className="table">
           <thead>
             <tr>
-              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: '3rem' }} />
               <th>ID</th>
               <th>DATE</th>
               <th>TOTAL</th>
               <th>PAID</th>
-              <th>ACTIONS</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>

@@ -37,7 +37,7 @@ const PaymentMethodScreen = () => {
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Payment Method 1</h1>
+          <h1>Payment Method </h1>
         </div>
         <div>
           <div>
@@ -53,7 +53,7 @@ const PaymentMethodScreen = () => {
         </div>
       </form>
 
-      <form className="form" onSubmit={submitHandler2}>
+      {/* <form className="form" onSubmit={submitHandler2}>
         <div>
           <h1>Payment Method 2</h1>
         </div>
@@ -69,7 +69,7 @@ const PaymentMethodScreen = () => {
             Flutterwave
           </button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };

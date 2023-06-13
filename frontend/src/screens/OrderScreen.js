@@ -120,7 +120,7 @@ const OrderScreen = () => {
                         </div>
 
                         <div>
-                          {item.qty} x N{item.price} = ${item.qty * item.price}
+                          {item.qty} x N{item.price} = N{item.qty * item.price}
                         </div>
                       </div>
                     </li>

@@ -64,7 +64,7 @@ export default function CartScreen() {
                       ))}
                     </select>
                   </div>
-                  <div>${item.price}</div>
+                  <div>N{item.price}</div>
                   <div>
                     <button type="button" onClick={() => removeFromCartHandler(item.product)}>
                       Delete
@@ -81,7 +81,7 @@ export default function CartScreen() {
           <ul>
             <li>
               <h2>
-                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
+                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : N
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
               </h2>
             </li>

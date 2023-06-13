@@ -119,7 +119,7 @@ function App() {
             <Route path="/" element={<HomeScreen />}></Route>
           </Routes>
         </main>
-        <footer className="row center">All right reserved &copy; 2022 </footer>
+        <footer className="row center">Built by Oladeji Tosin &copy; 2023 </footer>
       </div>
     </Router>
   );
